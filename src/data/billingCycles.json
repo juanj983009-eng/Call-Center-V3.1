@@ -1,0 +1,161 @@
+{
+  "cycles": [
+    {
+      "code": 2,
+      "cycleDay": 2,
+      "period": "02 al 01 mes sig.",
+      "issueDay": "Día 02 mes sig.",
+      "dueDay": "Día 23 mes sig.",
+      "cutOffDay": "Día 30 mes sig.",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 05)"
+    },
+    {
+      "code": 4,
+      "cycleDay": 4,
+      "period": "04 al 03 mes sig.",
+      "issueDay": "Día 04 mes sig.",
+      "dueDay": "Día 25 mes sig.",
+      "cutOffDay": "Día 02 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 07)"
+    },
+    {
+      "code": 6,
+      "cycleDay": 6,
+      "period": "06 al 05 mes sig.",
+      "issueDay": "Día 06 mes sig.",
+      "dueDay": "Día 27 mes sig.",
+      "cutOffDay": "Día 04 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 09)"
+    },
+    {
+      "code": 8,
+      "cycleDay": 8,
+      "period": "08 al 07 mes sig.",
+      "issueDay": "Día 08 mes sig.",
+      "dueDay": "Día 29 mes sig.",
+      "cutOffDay": "Día 06 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+6 días (ej. 14)"
+    },
+    {
+      "code": 81,
+      "cycleDay": 8,
+      "period": "08 al 07 mes sig.",
+      "issueDay": "Día 08 mes sig.",
+      "dueDay": "Día 29 mes sig.",
+      "cutOffDay": "Día 06 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 11) - Variante Cta Cte"
+    },
+    {
+      "code": 10,
+      "cycleDay": 10,
+      "period": "10 al 09 mes sig.",
+      "issueDay": "Día 10 mes sig.",
+      "dueDay": "Día 30 mes sig.",
+      "cutOffDay": "Día 07 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 13)"
+    },
+    {
+      "code": 12,
+      "cycleDay": 12,
+      "period": "12 al 11 mes sig.",
+      "issueDay": "Día 12 mes sig.",
+      "dueDay": "Día 02 mes subsiguiente",
+      "cutOffDay": "Día 09 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 15)"
+    },
+    {
+      "code": 14,
+      "cycleDay": 14,
+      "period": "14 al 13 mes sig.",
+      "issueDay": "Día 14 mes sig.",
+      "dueDay": "Día 05 mes subsiguiente",
+      "cutOffDay": "Día 12 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 17)"
+    },
+    {
+      "code": 16,
+      "cycleDay": 16,
+      "period": "16 al 15 mes sig.",
+      "issueDay": "Día 16 mes sig.",
+      "dueDay": "Día 07 mes subsiguiente",
+      "cutOffDay": "Día 14 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 19)"
+    },
+    {
+      "code": 18,
+      "cycleDay": 18,
+      "period": "18 al 17 mes sig.",
+      "issueDay": "Día 18 mes sig.",
+      "dueDay": "Día 09 mes subsiguiente",
+      "cutOffDay": "Día 16 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 21)"
+    },
+    {
+      "code": 21,
+      "cycleDay": 21,
+      "period": "21 al 20 mes sig.",
+      "issueDay": "Día 21 mes sig.",
+      "dueDay": "Día 11 mes subsiguiente",
+      "cutOffDay": "Día 18 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 24)"
+    },
+    {
+      "code": 24,
+      "cycleDay": 24,
+      "period": "24 al 23 mes sig.",
+      "issueDay": "Día 24 mes sig.",
+      "dueDay": "Día 14 mes subsiguiente",
+      "cutOffDay": "Día 21 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 27)"
+    },
+    {
+      "code": 26,
+      "cycleDay": 26,
+      "period": "26 al 25 mes sig.",
+      "issueDay": "Día 26 mes sig.",
+      "dueDay": "Día 17 mes subsiguiente",
+      "cutOffDay": "Día 24 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 29)"
+    },
+    {
+      "code": 28,
+      "cycleDay": 28,
+      "period": "28 al 27 mes sig.",
+      "issueDay": "Día 28 mes sig.",
+      "dueDay": "Día 19 mes subsiguiente",
+      "cutOffDay": "Día 26 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 01 mes sig.)"
+    },
+    {
+      "code": 30,
+      "cycleDay": 30,
+      "period": "30 al 29 mes sig.",
+      "issueDay": "Día 30 mes sig.",
+      "dueDay": "Día 21 mes subsiguiente",
+      "cutOffDay": "Día 28 mes subsiguiente",
+      "graceDaysAfterDue": 6,
+      "accountLoadOffset": "+3 días (ej. 03 mes sig.)"
+    }
+  ],
+  "rules": [
+    "Facturación a mes vencido: La boleta se emite el mismo día del ciclo tras cerrar el período de consumo.",
+    "Plazo de pago: El cliente dispone de 6 días adicionales tras la fecha de vencimiento antes de la fecha de corte.",
+    "Cambio de ciclo: Se refleja en la boleta subsiguiente, facturando los días transcurridos entre el inicio del ciclo anterior y el inicio del nuevo ciclo.",
+    "Equipo en arriendo: En la boleta donde se cobra el proporcional por cambio de ciclo se adelanta 1 cuota del equipo.",
+    "Carga Cta Cte (renovación de bolsas): Ocurre 3 días después del día de ciclo (excepto Ciclo 8 que carga a +6 días)."
+  ]
+}

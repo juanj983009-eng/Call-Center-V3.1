@@ -1,0 +1,306 @@
+[
+  {
+    "id": "bloqueo-robo",
+    "title": "Bloqueo Línea y Equipo (Robo / Hurto / Extravío)",
+    "system": "CRM One -> Iniciar Orden",
+    "reasonHeader": "Bloqueo robo (servicio y equipo en uso) | Bloqueo hurto | Bloqueo extravío | Robo / Pérdida (Solo SIM)",
+    "sla": "Hasta 2 horas",
+    "fields": [
+      { "key": "rut", "label": "RUT", "placeholder": "12.345.678-9" },
+      { "key": "nombre", "label": "Nombre Completo", "placeholder": "Nombre Titular" },
+      { "key": "direccion", "label": "Dirección", "placeholder": "Calle, Número, Comuna" },
+      { "key": "motivo", "label": "Motivo", "placeholder": "Robo / Hurto / Extravío" }
+    ],
+    "template": "- RUT: {{rut}}\n- Nombre Completo: {{nombre}}\n- Dirección: {{direccion}}\n- Motivo: {{motivo}}"
+  },
+  {
+    "id": "desbloqueo-robo",
+    "title": "Desbloqueo Servicio y Equipo (Sucursales Biometría)",
+    "system": "CRM One -> Iniciar Orden",
+    "reasonHeader": "Desbloqueo robo (servicio y equipo en uso) | Desbloqueo Robo / Pérdida (Solo SIM)",
+    "sla": "Inmediato",
+    "fields": [
+      { "key": "rut", "label": "RUT", "placeholder": "12.345.678-9" },
+      { "key": "nombre", "label": "Nombre Completo", "placeholder": "Nombre Titular" },
+      { "key": "direccion", "label": "Dirección", "placeholder": "Calle, Número, Comuna" },
+      { "key": "motivo", "label": "Motivo", "placeholder": "Recuperación de equipo / Reposición de SIM" }
+    ],
+    "template": "- Titular solicita desbloqueo de servicio y equipo, validado con CI y biometría dactilar.\n- RUT: {{rut}}\n- Nombre completo: {{nombre}}\n- Dirección: {{direccion}}\n- Motivo: {{motivo}}"
+  },
+  {
+    "id": "cambio-plan-fpv",
+    "title": "Cambio de Plan (Texto de la Razón FPV)",
+    "system": "FPV -> Actualizar Atributos de Acción de Orden",
+    "reasonHeader": "Cambio de Plan",
+    "sla": "Inmediato o Agendado inicio ciclo",
+    "fields": [
+      { "key": "planAntiguo", "label": "Plan Antiguo", "placeholder": "Ej. Max M" },
+      { "key": "planNuevo", "label": "Plan Nuevo", "placeholder": "Ej. Plan 500 GB Libre" },
+      { "key": "cargoFijo", "label": "Nuevo Cargo Fijo", "placeholder": "$9.990" },
+      { "key": "estructura", "label": "Explicación de estructura", "placeholder": "500 GB, min libres 300 num, 500 SMS" },
+      { "key": "inicio", "label": "Inicio", "placeholder": "Inmediato / Fecha ciclo" },
+      { "key": "proporcionales", "label": "Proporcionales (SI/NO)", "placeholder": "SI" }
+    ],
+    "template": "- Plan Antiguo: {{planAntiguo}}\n- Plan Nuevo: {{planNuevo}}\n- Nuevo Cargo Fijo: {{cargoFijo}}\n- Explicación de estructura: {{estructura}}\n- Inicio: {{inicio}}\n- Proporcionales: {{proporcionales}}\n- Informar que perderá descuentos: SI"
+  },
+  {
+    "id": "cambio-equipo-claroup",
+    "title": "Cambio de Equipo / Claro Up (Texto de la Razón FPV)",
+    "system": "FPV -> Cambio de Equipo",
+    "reasonHeader": "Cambio de Equipo",
+    "sla": "Inmediato",
+    "fields": [
+      { "key": "eqAntiguo", "label": "Equipo Antiguo", "placeholder": "Marca y Modelo" },
+      { "key": "eqNuevo", "label": "Equipo Nuevo", "placeholder": "Marca y Modelo" },
+      { "key": "entrega", "label": "Entrega equipo anterior (SI/NO)", "placeholder": "NO" },
+      { "key": "duracion", "label": "Duración contrato", "placeholder": "18 Meses" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "cuotas", "label": "N° de cuotas", "placeholder": "18" },
+      { "key": "modalidad", "label": "Modalidad", "placeholder": "Arriendo ARR / Tarjeta" },
+      { "key": "ods", "label": "ODS TSA3 (Solo Claro Up)", "placeholder": "N° ODS o N/A" }
+    ],
+    "template": "- Equipo Antiguo: {{eqAntiguo}}\n- Equipo Nuevo: {{eqNuevo}}\n- Entrega equipo anterior: {{entrega}}\n- Duración de contrato: {{duracion}}\n- PCS: {{pcs}}\n- N° de cuotas: {{cuotas}}\n- Modalidad: {{modalidad}}\n- ODS TSA3 (si es Claro Up): {{ods}}"
+  },
+  {
+    "id": "ajuste-nc-directa",
+    "title": "Ajuste / Nota de Crédito Directa (Hasta $7.000)",
+    "system": "CRM One -> Cuenta Financiera -> Declaración -> Cargo de Crédito",
+    "reasonHeader": "CORRIGE MONTO FACTURADO",
+    "sla": "En línea (Máx $7.000 por RUT/Cuenta)",
+    "fields": [
+      { "key": "monto", "label": "Monto Nota de Crédito", "placeholder": "$5.005" },
+      { "key": "rut", "label": "RUT Cliente", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "cuenta", "label": "N° Cuenta Financiera", "placeholder": "N° Cuenta" },
+      { "key": "boleta", "label": "Boleta N°", "placeholder": "N° Factura" },
+      { "key": "concepto", "label": "Concepto y Hashtag", "placeholder": "Cobro SVA no reconocido #SVATERCERO" }
+    ],
+    "template": "Monto Nota de Crédito: {{monto}}\nRUT Cliente: {{rut}}\nPCS: {{pcs}}\nN° Cuenta Financiera: {{cuenta}}\nBoleta N°: {{boleta}}\nMotivo / Concepto: {{concepto}}\nResuelto en Línea: SI"
+  },
+  {
+    "id": "caso-impugnacion",
+    "title": "Caso de Impugnación BackOffice (> $7.000 o SVA no listado)",
+    "system": "CRM One -> Cuenta Financiera -> Créditos y Cargos -> Cargo en Impugnación",
+    "reasonHeader": "Regularización caso disputa AMDOCS",
+    "sla": "5 días hábiles",
+    "fields": [
+      { "key": "motivo", "label": "Motivo del reclamo", "placeholder": "No reconoce cobro SVA / Proporcional" },
+      { "key": "boleta", "label": "Boleta N°", "placeholder": "N° Factura Legal" },
+      { "key": "cuenta", "label": "Cta. Financiera", "placeholder": "N° Cuenta" },
+      { "key": "pcs", "label": "PCS a ajustar", "placeholder": "569XXXXXXXX" },
+      { "key": "concepto", "label": "Concepto + Hashtag", "placeholder": "Detalle cobro #SVATERCERO" },
+      { "key": "monto", "label": "Monto Disputado", "placeholder": "$12.500" }
+    ],
+    "template": "Motivo: {{motivo}}\nBoleta N°: {{boleta}}\nCta. Financiera: {{cuenta}}\nPCS a ajustar: {{pcs}}\nConcepto: {{concepto}}\nMonto Disputado: {{monto}}"
+  },
+  {
+    "id": "baja-sva-suscripcion",
+    "title": "Baja de Suscripción SVA (SUMA / SMS)",
+    "category": "SVA y Cobros",
+    "system": "SUMA (customer.portal.shop) / CRM One",
+    "reasonHeader": "Consultas Comerciales -> Productos y Servicios Contratados -> Servicios Adicionales",
+    "sla": "Inmediato",
+    "fields": [
+      { "key": "hashtag", "label": "Hashtag (#BAJASVASUMA / #BAJASVASMS)", "placeholder": "#BAJASVASUMA" },
+      { "key": "rut", "label": "RUT Titular", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "sva", "label": "SVA / Glosa dada de baja", "placeholder": "Ej. Pienzzo HotZone / Claro Juegos" },
+      { "key": "canal", "label": "Canal de Baja", "placeholder": "Portal SUMA / Instrucción SMS" }
+    ],
+    "template": "{{hashtag}}\n- RUT: {{rut}}\n- PCS: {{pcs}}\n- SVA Desactivado: {{sva}}\n- Canal de Baja: {{canal}}\n- Gestión: Suscripción dada de baja para evitar cobros futuros."
+  },
+  {
+    "id": "desconexion-sva-recurrente-tipifica",
+    "title": "Desconexión SVA Recurrente / Asistencia Mascotas (Tipifica)",
+    "system": "Tipifica (INICIO -> MOVIL MAS -> SERVICIOS ADICIONALES - SVA -> DESCONTRATACIÓN)",
+    "reasonHeader": "Descontratación Servicio Adicional / Asistencia Mascotas (#ASISTENCIAMASCOTAS / #BAJASVA)",
+    "sla": "24 a 48 horas hábiles",
+    "preconditions": [
+      "Ingreso exclusivo por Tipifica (no ejecutar descontratación de SVA por Front de Postventa FPV).",
+      "Informar al cliente que se facturará el cobro proporcional por los días activos hasta la fecha de desconexión."
+    ],
+    "fields": [
+      { "key": "hashtag", "label": "Hashtag (#ASISTENCIAMASCOTAS / #BAJASVA)", "placeholder": "#ASISTENCIAMASCOTAS" },
+      { "key": "rut", "label": "RUT Titular", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "servicio", "label": "Servicio Adicional a dar de baja", "placeholder": "Asistencia Mascotas Estándar / Seguro Móvil / N° Privado" },
+      { "key": "motivo", "label": "Motivo de baja", "placeholder": "Cliente solicita descontratación del servicio adicional" }
+    ],
+    "template": "{{hashtag}}\n- RUT: {{rut}}\n- PCS: {{pcs}}\n- Servicio Desconectado: {{servicio}}\n- Motivo: {{motivo}}\n- Nota: Se informa cobro proporcional por días activos hasta la fecha de baja."
+  },
+  {
+    "id": "baja-sva-tipifica",
+    "title": "Baja de SVA (Tipifica)",
+    "system": "Tipifica -> MOVIL MAS -> SERVICIOS ADICIONALES - SVA -> BAJA DE SVA",
+    "reasonHeader": "Baja / Descontratación de Suscripción SVA (#BAJASVA)",
+    "sla": "3 a 24 horas hábiles",
+    "preconditions": [
+      "Diferenciar de Lista Negra: BAJA DE SVA descontratata la suscripción activa; LISTA NEGRA bloquea al proveedor para cobros futuros.",
+      "Para bolsas o servicio LDI, usar la gestión dedicada 'Activación / Desactivación LDI (Galileo Tipifica)'."
+    ],
+    "fields": [
+      { "key": "rut", "label": "RUT del titular", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS a desactivar servicio", "placeholder": "569XXXXXXXX" },
+      { "key": "email", "label": "E-mail cliente", "placeholder": "cliente@correo.cl" },
+      { "key": "sva", "label": "SVA / Suscripción a dar de baja", "placeholder": "Ej. Pienzzo HotZone / Claro Juegos / Club Apps" },
+      { "key": "observacion", "label": "Observación", "placeholder": "Cliente solicita baja de suscripción SVA" }
+    ],
+    "template": "#BAJASVA\n- RUT: {{rut}}\n- PCS a desactivar servicio: {{pcs}}\n- E-mail cliente: {{email}}\n- SVA a dar de baja: {{sva}}\n- Observación: {{observacion}}"
+  },
+  {
+    "id": "lista-negra-sva",
+    "title": "Bloqueo Permanente SVA (Lista Negra Tipifica)",
+    "system": "Tipifica -> MOVIL MAS -> SERVICIOS ADICIONALES - SVA -> LISTA NEGRA",
+    "reasonHeader": "Ingreso a Listado de Bloqueo de Suscripción",
+    "sla": "2 días hábiles",
+    "fields": [
+      { "key": "pcs", "label": "Número PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "proveedor", "label": "Proveedor SVA", "placeholder": "Ej. Pienzzo / Opratel" },
+      { "key": "corto", "label": "Número Corto", "placeholder": "Ej. 5005" }
+    ],
+    "template": "Número PCS: {{pcs}}\nProveedor: {{proveedor}}\nNúmero Corto: {{corto}}\nDetalle de la atención entregada: Cliente solicita bloqueo permanente de suscripciones de terceros."
+  },
+  {
+    "id": "descuentos-fide-tipifica",
+    "title": "Descuentos Fidelización 15% y 30% (Tipifica)",
+    "system": "Tipifica (MOVIL MÁS -> CALL BACK BOTÓN ROJO MÓVIL -> REGULARIZACIÓN DE PYD)",
+    "reasonHeader": "PYD DIFERENTE AL OFRECIDO / PYD NO CARGADO (#ACTIVACIONDESCUENTO)",
+    "sla": "1 día hábil",
+    "preconditions": [
+      "Regla Cargo Fijo Base: > $8.000 habilita 15% (6 meses); > $10.300 / $11.990 / $15.100 / $18.300 habilita 30% (6 meses).",
+      "OBLIGATORIO: Eliminar cualquier descuento previo en CRM One antes de cargar el nuevo para evitar duplicidades."
+    ],
+    "fields": [
+      { "key": "rut", "label": "RUT del cliente", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "descuento", "label": "Descuento a ingresar", "placeholder": "PYD_A FIDE 15% / PYD_A FIDE 30%" },
+      { "key": "duracion", "label": "Duración del beneficio", "placeholder": "6 meses / 12 meses" },
+      { "key": "cargoFinal", "label": "Cargo Fijo Mensual Final (con IVA)", "placeholder": "$9.990" },
+      { "key": "motivo", "label": "Motivo de la aplicación", "placeholder": "Downselling / Retención / Regularización de PyD" }
+    ],
+    "template": "#ACTIVACIONDESCUENTO #REGULARIZACIONPYD\n- RUT: {{rut}}\n- PCS: {{pcs}}\n- Descuento a ingresar: {{descuento}}\n- Duración del beneficio: {{duracion}}\n- Cargo Fijo Mensual Final con Descuento: {{cargoFinal}}\n- Motivo de la aplicación: {{motivo}}"
+  },
+  {
+    "id": "ldi-galileo",
+    "title": "Activación / Desactivación LDI (Galileo Tipifica)",
+    "system": "Tipifica -> MOVIL MAS -> GALILEO",
+    "reasonHeader": "Galileo - Activación / Desactivación LDI",
+    "sla": "24 a 48 horas hábiles",
+    "fields": [
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "rut", "label": "RUT", "placeholder": "12.345.678-9" },
+      { "key": "accion", "label": "Acción", "placeholder": "Activación de LDI" },
+      { "key": "emailCliente", "label": "Email del cliente", "placeholder": "cliente@correo.cl" },
+      { "key": "emailEjecutivo", "label": "Email remitente (Ejecutivo)", "placeholder": "ejecutivo@clarochile.cl" }
+    ],
+    "template": "Galileo\n- PCS: {{pcs}}\n- RUT: {{rut}}\n- {{accion}}\n- Email del cliente: {{emailCliente}}\n- Canal y/o Plataforma: Call Center Front\n- Email del remitente: {{emailEjecutivo}}\n- Resultado de validación de identidad: APROBADA (Validación Facial)"
+  },
+  {
+    "id": "traspaso-titularidad",
+    "title": "Traspaso de Titularidad (Caso BackOffice)",
+    "system": "CRM One -> Caso (Tipo: Traspaso de titularidad / Móvil / Validación de identidad)",
+    "reasonHeader": "Traspaso de titularidad",
+    "sla": "3 días hábiles",
+    "fields": [
+      { "key": "titularAntiguo", "label": "Nombre Titular Antiguo", "placeholder": "Nombre completo" },
+      { "key": "callId", "label": "Call ID / Código validación", "placeholder": "ID llamada" },
+      { "key": "titularNuevo", "label": "Nombre Nuevo Titular", "placeholder": "Nombre completo" },
+      { "key": "telAntiguo", "label": "N° contacto antiguo titular", "placeholder": "569XXXXXXXX" },
+      { "key": "telNuevo", "label": "N° contacto nuevo titular", "placeholder": "569XXXXXXXX" },
+      { "key": "cuenta", "label": "Cuenta financiera", "placeholder": "N° Cuenta origen" },
+      { "key": "pcs", "label": "Línea PCS a traspasar", "placeholder": "569XXXXXXXX" }
+    ],
+    "template": "Tipo validación titular antiguo: Registro Civil - {{titularAntiguo}}\nCódigo validación y/o call id titular antiguo: {{callId}}\nTipo validación titular nuevo: Por BackOffice - {{titularNuevo}}\nCódigo validación: N/A (2° validación al tercero lo hace el BO)\nN° contacto antiguo titular: {{telAntiguo}}\nN° contacto nuevo titular: {{telNuevo}}\nCuenta financiera: {{cuenta}}\nLínea PCS a traspasar: {{pcs}}"
+  },
+  {
+    "id": "separacion-cuentas-tipifica",
+    "title": "Separación de Cuentas (RUT / Líneas)",
+    "system": "Tipifica (MÓVIL MÁS -> MODIFICACIONES AL CONTRATO -> SEPARACIÓN DE CUENTAS)",
+    "reasonHeader": "SOLICITUD -> SE GENERA CASO (#SEPARACIONCUENTA)",
+    "sla": "1 día hábil",
+    "preconditions": [
+      "Requisitos: Línea activa, sin deuda vencida en todo el RUT y GGTT Mandato Full con 18 meses cumplidos (Light sin restricción).",
+      "Ejecución: Postpago Normal es inmediata; Cuenta Exacta se programa para el día anterior al inicio de ciclo.",
+      "Arriendo: Si tiene cuotas pendientes de equipo, se aceleran cobrándose íntegramente en la próxima boleta de origen."
+    ],
+    "fields": [
+      { "key": "rut", "label": "RUT del cliente", "placeholder": "12.345.678-9" },
+      { "key": "serieCi", "label": "Serie del carnet de identidad", "placeholder": "N° Serie validado" },
+      { "key": "codValidacion", "label": "Código de validación de identidad", "placeholder": "Código aplicativo" },
+      { "key": "pcs", "label": "PCS de las líneas a separar", "placeholder": "569XXXXXXXX" },
+      { "key": "tipoLinea", "label": "Tipo de línea", "placeholder": "Postpago Normal / Cuenta Exacta" },
+      { "key": "ctaOrigen", "label": "Cuenta financiera de origen", "placeholder": "N° Cuenta origen" },
+      { "key": "ctaDestino", "label": "Cuenta financiera de destino", "placeholder": "N° Cuenta nueva o a asociar" },
+      { "key": "telefono", "label": "Teléfono de contacto", "placeholder": "569XXXXXXXX" },
+      { "key": "email", "label": "Correo de contacto", "placeholder": "cliente@correo.cl" },
+      { "key": "aceptaCuotas", "label": "Acepta cobro de cuotas aceleradas", "placeholder": "SI / NO / NO APLICA" }
+    ],
+    "template": "#SEPARACIONCUENTA\n- RUT del cliente: {{rut}}\n- Serie del carnet de identidad: {{serieCi}}\n- Código de validación de identidad: {{codValidacion}}\n- PCS de las líneas a separar: {{pcs}}\n- Tipo de línea: {{tipoLinea}}\n- Cuenta financiera de origen: {{ctaOrigen}}\n- Cuenta financiera de destino: {{ctaDestino}}\n- Teléfono de contacto: {{telefono}}\n- Correo de contacto: {{email}}\n- Acepta cobro de cuotas aceleradas (si aplica): {{aceptaCuotas}}"
+  },
+  {
+    "id": "union-cuentas-fpv",
+    "title": "Unificación / Unión de Cuentas (FPV)",
+    "system": "FPV (Mundo Móvil -> Unificación de Cuentas -> Reorganización -> Confirmar)",
+    "reasonHeader": "Unificación de cuentas (#UNIFICACIONCUENTA)",
+    "sla": "En línea (Reflejo en boleta subsiguiente)",
+    "preconditions": [
+      "Bloqueos FPV: No permite unificar si hay deuda vencida en el RUT, órdenes abiertas en CRM One, Equipo en Arriendo o Claro Up activo.",
+      "Requiere mínimo 2 cuentas financieras activas bajo el mismo RUT (si comparten CBP exige crear nuevo CBP).",
+      "Ciclo: La línea adopta el ciclo y vencimiento de la cuenta destino; informar cobro de proporcionales."
+    ],
+    "fields": [
+      { "key": "rut", "label": "RUT del titular", "placeholder": "12.345.678-9" },
+      { "key": "nombre", "label": "Nombre Completo", "placeholder": "Nombre del cliente" },
+      { "key": "pcs", "label": "PCS a Unificar", "placeholder": "569XXXXXXXX" },
+      { "key": "ctaOrigen", "label": "Cuenta Financiera Origen", "placeholder": "N° Cuenta anterior" },
+      { "key": "ctaDestino", "label": "Cuenta Financiera Destino", "placeholder": "N° Cuenta consolidada" },
+      { "key": "cicloDestino", "label": "Ciclo de Facturación Destino", "placeholder": "Ciclo XX - Vencimiento Día DD" }
+    ],
+    "template": "#UNIFICACIONCUENTA\n- RUT: {{rut}}\n- Nombre Completo: {{nombre}}\n- PCS a Unificar: {{pcs}}\n- Cuenta Financiera Origen: {{ctaOrigen}}\n- Cuenta Financiera Destino: {{ctaDestino}}\n- Ciclo de Facturación Destino: {{cicloDestino}}\n- Motivo: Unificación de cuentas para consolidación de boleta única\n- Proporcionales informados: SI"
+  },
+  {
+    "id": "ticket-sdesk",
+    "title": "Ticket Mesa de Ayuda SDESK (HLR / ONE)",
+    "system": "Supportal HelpDesk SDESK (sdesk.clarochile.cl)",
+    "reasonHeader": "Tipo: ONE | Cat: HLR / ONE | HLR: Sí",
+    "sla": "2 hrs hábiles (HLR) / 2-48 hrs (ONE)",
+    "fields": [
+      { "key": "pcs", "label": "PCS Afectado (11 dígitos)", "placeholder": "569XXXXXXXX" },
+      { "key": "rut", "label": "RUT", "placeholder": "12345678-9" },
+      { "key": "qdn", "label": "Diagnóstico en QDN", "placeholder": "VLR/SGSN en UNKNOWN / No figura en HLR" },
+      { "key": "pruebas", "label": "Pruebas realizadas", "placeholder": "Modo Avión / Prueba cruzada" },
+      { "key": "solicitud", "label": "Solicitud específica", "placeholder": "Cambio de perfil en HLR" }
+    ],
+    "template": "PCS AFECTADO: {{pcs}}\nRUT: {{rut}}\nDIAGNÓSTICO EN QDN: {{qdn}}\nESTADO EN CRM ONE: Activo / Sin pausas / Fuera de cobranza\nPRUEBAS REALIZADAS: {{pruebas}}\nSOLICITUD: Se solicita {{solicitud}} para restablecer servicio."
+  },
+  {
+    "id": "traslado-pago",
+    "title": "Traslado de Pago No Registrado",
+    "system": "CRM One -> Caso (Recaudación -> Pago No Registrado)",
+    "reasonHeader": "Traslado de Pago",
+    "sla": "3 días hábiles",
+    "fields": [
+      { "key": "rut", "label": "Rut", "placeholder": "12.345.678-9" },
+      { "key": "pcs", "label": "PCS", "placeholder": "569XXXXXXXX" },
+      { "key": "monto", "label": "Monto pagado", "placeholder": "$12.990" },
+      { "key": "ctaOrigen", "label": "Cuenta Origen (Error)", "placeholder": "N° Cuenta" },
+      { "key": "ctaDestino", "label": "Cuenta Destino (Correcta)", "placeholder": "N° Cuenta" },
+      { "key": "recaudador", "label": "N° Boleta / Recaudador", "placeholder": "N° Doc - BancoEstado / Servipag" },
+      { "key": "fechaHora", "label": "Fecha y Hora de Pago", "placeholder": "DD/MM/AAAA HH:MM" }
+    ],
+    "template": "#TRASLADOPAGO\nRut: {{rut}}\nPCS: {{pcs}}\nMonto: {{monto}}\nCuenta Origen: {{ctaOrigen}}\nCuenta Destino: {{ctaDestino}}\nN° Boleta / Recaudador: {{recaudador}}\nFecha y Hora de Pago: {{fechaHora}}\nSe adjunta comprobante en Gestor: SI"
+  },
+  {
+    "id": "modificacion-datos-bo",
+    "title": "Modificación de Nombre/Apellido (BackOffice)",
+    "system": "CRM One -> Caso (Modificación Datos -> Cambio de Datos Cliente -> Carpeta CLARO UP)",
+    "reasonHeader": "Actualización legal de titular",
+    "sla": "24 horas hábiles",
+    "fields": [
+      { "key": "autentikar", "label": "N° Validación Autentikar", "placeholder": "Código validación" },
+      { "key": "anterior", "label": "Dato anterior", "placeholder": "Nombre/Apellido erróneo" },
+      { "key": "nuevo", "label": "Dato modificado", "placeholder": "Nombre/Apellido correcto" }
+    ],
+    "template": "Número de validación Autentikar: {{autentikar}}\nMotivo de la solicitud: Actualización legal de titular\nDato anterior: {{anterior}}\nDato modificado: {{nuevo}}"
+  }
+]

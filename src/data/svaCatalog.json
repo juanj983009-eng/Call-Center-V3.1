@@ -1,0 +1,286 @@
+[
+  {
+    "id": "claro-drive",
+    "name": "Claro Drive",
+    "provider": "Claro",
+    "type": "Propio",
+    "priceRef": "100 GB gratis / 200 GB $750 / 1 TB $1.490 / 5 TB $6.490",
+    "sms": [{ "keyword": "BAJA", "shortcode": "2505" }],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "App Claro Drive / FPV / CRM One (Borrar en Productos Asignados)"
+  },
+  {
+    "id": "claro-juegos",
+    "name": "GMLT - Claro Juegos",
+    "provider": "Gameloft",
+    "type": "Propio",
+    "priceRef": "Suscripción periódica",
+    "sms": [{ "keyword": "SALIR", "shortcode": "5921" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "club-apps",
+    "name": "Bemobi - Club Apps",
+    "provider": "Bemobi",
+    "type": "Propio",
+    "priceRef": "Suscripción periódica",
+    "sms": [{ "keyword": "BAJA", "shortcode": "2701" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "claro-musica",
+    "name": "Claro Música",
+    "provider": "Claro",
+    "type": "Propio",
+    "priceRef": "Suscripción mensual",
+    "sms": [{ "keyword": "SALIR", "shortcode": "7980" }],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "App Claro Música"
+  },
+  {
+    "id": "claro-video",
+    "name": "Claro Video / Add-ons",
+    "provider": "Claro",
+    "type": "Propio",
+    "priceRef": "Por arriendo / add-on",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "App Claro Video / Desactivación en CRM One"
+  },
+  {
+    "id": "club-claro-tnt",
+    "name": "Club Claro (TNT Sports en Claro Video)",
+    "provider": "Claro",
+    "type": "Propio",
+    "priceRef": "Suscripción streaming",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "App Claro Video o llamada al *2826"
+  },
+  {
+    "id": "asistencia-mascotas",
+    "name": "Asistencia de Mascotas (Estándar / Premium)",
+    "provider": "Serviclick (MHM Servicios SpA)",
+    "type": "Propio",
+    "priceRef": "Estándar: $3.990 / Premium: $9.990",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "FPV (Servicios Adicionales -> SVA'S -> Descontratación). Soporte: 600 0860 580"
+  },
+  {
+    "id": "pienzzo-hotzone",
+    "name": "Pienzzo - HotZone",
+    "provider": "Pienzzo",
+    "type": "Terceros",
+    "priceRef": "Semanal / Mensual ($5.005)",
+    "sms": [
+      { "keyword": "SALIR", "shortcode": "6970", "note": "Semanal" },
+      { "keyword": "SALIRHOT", "shortcode": "5005", "note": "Mensual" }
+    ],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "pienzzo-platinum",
+    "name": "Pienzzo - Platinum",
+    "provider": "Pienzzo",
+    "type": "Terceros",
+    "priceRef": "Semanal / Mensual ($5.005)",
+    "sms": [
+      { "keyword": "SALIR", "shortcode": "6960", "note": "Semanal" },
+      { "keyword": "SALIRPLAT", "shortcode": "5005", "note": "Mensual" }
+    ],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "club-renxo",
+    "name": "Renxo - Club Renxo",
+    "provider": "Renxo",
+    "type": "Terceros",
+    "priceRef": "Semanal",
+    "sms": [{ "keyword": "SALIR", "shortcode": "80100" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "tv-toonz",
+    "name": "Renxo - TV Toonz",
+    "provider": "Renxo",
+    "type": "Terceros",
+    "priceRef": "Semanal infantil",
+    "sms": [{ "keyword": "BAJA", "shortcode": "80100" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "cykadas-norton",
+    "name": "Cykadas - Norton",
+    "provider": "Cykadas",
+    "type": "Terceros",
+    "priceRef": "Mensual antivirus",
+    "sms": [{ "keyword": "BAJANORTON3", "shortcode": "6832" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "digital-virgo-busuu",
+    "name": "Digital Virgo - Busuu",
+    "provider": "Digital Virgo",
+    "type": "Terceros",
+    "priceRef": "Mensual idiomas",
+    "sms": [{ "keyword": "SALIR BUSUU", "shortcode": "6006" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "digital-virgo-peak",
+    "name": "Digital Virgo - Peak",
+    "provider": "Digital Virgo",
+    "type": "Terceros",
+    "priceRef": "Mensual entrenamiento",
+    "sms": [{ "keyword": "SALIR PEAK", "shortcode": "6400" }],
+    "sumaAvailable": true,
+    "blacklistRequired": true,
+    "altChannel": "Portal SUMA (customer.portal.shop) / Tipifica Lista Negra"
+  },
+  {
+    "id": "zona-goles",
+    "name": "Digital Virgo - Zona Goles",
+    "provider": "Digital Virgo",
+    "type": "Terceros",
+    "priceRef": "Semanal fútbol",
+    "sms": [{ "keyword": "SALIR", "shortcode": "9662" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "todos-gamers",
+    "name": "Opratel - Todos Gamers",
+    "provider": "Opratel",
+    "type": "Terceros",
+    "priceRef": "Semanal juegos",
+    "sms": [{ "keyword": "SALIR", "shortcode": "5554" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "guapisima",
+    "name": "Opratel - Guapísima",
+    "provider": "Opratel",
+    "type": "Terceros",
+    "priceRef": "Semanal femenino",
+    "sms": [{ "keyword": "SALIR", "shortcode": "6665" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "emologic",
+    "name": "Emologic (Destino Único / Tu Gourmet)",
+    "provider": "Emologic",
+    "type": "Terceros",
+    "priceRef": "Mensual",
+    "sms": [{ "keyword": "BAJA", "shortcode": "1995" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "tnt-sports-goles",
+    "name": "TNT Sports Goles",
+    "provider": "Warner / Turner",
+    "type": "Terceros",
+    "priceRef": "Mensual",
+    "sms": [{ "keyword": "BAJA", "shortcode": "9661" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "suscripciones-3gmt",
+    "name": "Suscripciones 3GMT",
+    "provider": "3G Motion",
+    "type": "Terceros",
+    "priceRef": "Periódico",
+    "sms": [
+      { "keyword": "BAJA", "shortcode": "8889" },
+      { "keyword": "BAJA", "shortcode": "8122" }
+    ],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "servicio-la-roja",
+    "name": "Servicio La Roja",
+    "provider": "Contenido Selección",
+    "type": "Terceros",
+    "priceRef": "Periódico",
+    "sms": [{ "keyword": "BAJA", "shortcode": "7652" }],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra"
+  },
+  {
+    "id": "picardia-qello",
+    "name": "Picardía Nacional / Qello",
+    "provider": "Stingray / Adultos",
+    "type": "Terceros",
+    "priceRef": "Mensual streaming",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "App Claro Video o llamada al *2826"
+  },
+  {
+    "id": "tonos-espera",
+    "name": "Tonos de Espera",
+    "provider": "Claro",
+    "type": "Propio",
+    "priceRef": "Mensual",
+    "sms": [{ "keyword": "BAJA", "shortcode": "8333" }],
+    "sumaAvailable": false,
+    "blacklistRequired": false,
+    "altChannel": "Llamada al *8333 o App Tonos de Espera"
+  },
+  {
+    "id": "publiguias-007",
+    "name": "Publiguías 007",
+    "provider": "Contact BPO / Claro",
+    "type": "Otros",
+    "priceRef": "Cobro tasado por llamada",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Portal Web Lista Negra (c2c.contactbpo.pe/claro)"
+  },
+  {
+    "id": "compras-evento",
+    "name": "Compras Gameloft / Badoo / TIMW DirectTV / Huawei AppGallery",
+    "provider": "Varios",
+    "type": "Terceros",
+    "priceRef": "Por evento / Carrier Billing",
+    "sms": [],
+    "sumaAvailable": false,
+    "blacklistRequired": true,
+    "altChannel": "Tipifica Lista Negra (Huawei: ajustes de cuenta AppGallery)"
+  }
+]
